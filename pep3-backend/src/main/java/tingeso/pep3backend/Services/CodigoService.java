@@ -28,7 +28,7 @@ public class CodigoService {
             CodigoEntity nuevoCodigo = new CodigoEntity();
             nuevoCodigo.setContenido(contenido);
             nuevoCodigo.setRespuesta(respuesta);
-            codigoRepository.save(nuevoCodigo);
+            save(nuevoCodigo);
 
             System.out.println("El id del codigo almacenado es: " + nuevoCodigo.getIdCodigo());
 
@@ -44,13 +44,16 @@ public class CodigoService {
             CodigoEntity nuevoCodigo = new CodigoEntity();
             nuevoCodigo.setContenido(contenido);
             nuevoCodigo.setRespuesta(respuesta);
+            save(nuevoCodigo);
             System.out.println("El id del codigo creado es: " + nuevoCodigo.getIdCodigo());
             return nuevoCodigo;
         }catch(IOException error){
             return null;
         }
     }
-
+    public void save(CodigoEntity codigo){
+        codigoRepository.save(codigo);
+    }
     // Read
     public List<CodigoEntity> obtenerCodigos(){
         return codigoRepository.findAll();

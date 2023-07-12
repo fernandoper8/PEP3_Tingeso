@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import tingeso.pep3backend.Entities.PruebaEntity;
 import tingeso.pep3backend.Services.PruebaService;
 
 import java.util.ArrayList;
@@ -16,24 +17,36 @@ public class PruebaController {
     @Autowired
     PruebaService pruebaService;
 
+    // Create
     @PostMapping("/crear")
-    public ResponseEntity<PruebaController> crearPrueba(@RequestParam("archivo1") MultipartFile archivo1, String respuesta1,
-                                                        @RequestParam("archivo2") MultipartFile archivo2, String respuesta2,
-                                                        @RequestParam("archivo3") MultipartFile archivo3, String respuesta3,
-                                                        @RequestParam("archivo4") MultipartFile archivo4, String respuesta4){
-        List<MultipartFile> fileList = new ArrayList<MultipartFile>();
-        fileList.add(archivo1);
-        fileList.add(archivo2);
-        fileList.add(archivo3);
-        fileList.add(archivo4);
+    public ResponseEntity<String> crearPrueba(@RequestParam("archivo1") MultipartFile archivo1, @RequestParam("respuesta1")String respuesta1,
+                                              @RequestParam("archivo2") MultipartFile archivo2, @RequestParam("respuesta2")String respuesta2,
+                                              @RequestParam("archivo3") MultipartFile archivo3, @RequestParam("respuesta3")String respuesta3,
+                                              @RequestParam("archivo4") MultipartFile archivo4, @RequestParam("respuesta4")String respuesta4,
+                                              @RequestParam("dificultad") String dificultad){
+        List<MultipartFile> archivos = new ArrayList<MultipartFile>();
+        archivos.add(archivo1);
+        archivos.add(archivo2);
+        archivos.add(archivo3);
+        archivos.add(archivo4);
 
-        List<String> respuestaList = new ArrayList<String>();
-        respuestaList.add(respuesta1);
-        respuestaList.add(respuesta2);
-        respuestaList.add(respuesta3);
-        respuestaList.add(respuesta4);
+        List<String> respuestas = new ArrayList<String>();
+        respuestas.add(respuesta1);
+        respuestas.add(respuesta2);
+        respuestas.add(respuesta3);
+        respuestas.add(respuesta4);
 
-        //return pruebaService.crearPrueba();
-        return null;
+        return pruebaService.crearPrueba(archivos, respuestas, dificultad);
     }
+
+    // Read
+    @GetMapping
+    public List<PruebaEntity> obtenerPruebas(){
+        return pruebaService.obtenerPruebas();
+    }
+    @GetMapping("/{id}")
+    public PruebaEntity obtenerPruebaPorId(@PathVariable("id") int id){
+        return pruebaService.obtenerPruebaPorId(id);
+    }
+
 }

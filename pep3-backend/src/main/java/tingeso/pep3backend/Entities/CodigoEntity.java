@@ -16,5 +16,5 @@ public class CodigoEntity {
     private int idCodigo;
     private String respuesta;
     @Lob
-    private String contenido; // El codigo del .py (atributo momentaneo)
+    private String contenido;
 }

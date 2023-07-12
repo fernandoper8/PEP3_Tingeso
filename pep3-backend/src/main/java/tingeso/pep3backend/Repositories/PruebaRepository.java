@@ -6,4 +6,5 @@ import tingeso.pep3backend.Entities.PruebaEntity;
 
 @Repository
 public interface PruebaRepository extends JpaRepository<PruebaEntity, Integer> {
+    public PruebaEntity findByIdPrueba(int id);
 }
