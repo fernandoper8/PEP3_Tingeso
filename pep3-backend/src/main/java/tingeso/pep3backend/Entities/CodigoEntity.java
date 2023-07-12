@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.lang.NonNull;
 
 @Entity
+@Table(name="Codigos")
 @Data
 @NoArgsConstructor
 public class CodigoEntity {
