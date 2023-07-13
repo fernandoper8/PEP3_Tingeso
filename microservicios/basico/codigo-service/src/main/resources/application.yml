@@ -1,0 +1,12 @@
+server:
+  port: 8002
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/PEP3_Tingeso
+    username: postgres
+    password: 1234
+  application:
+    name: codigo-service
+  jpa:
+    hibernate:
+      ddl-auto: create

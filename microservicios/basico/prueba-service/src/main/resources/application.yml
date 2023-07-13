@@ -1,0 +1,12 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/PEP3_Tingeso
+    username: postgres
+    password: 1234
+  application:
+    name: prueba-service
+  jpa:
+    hibernate:
+      ddl-auto: create
