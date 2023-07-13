@@ -1,14 +1,15 @@
 package pep3.pruebaservice.Services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import pep3.pruebaservice.Entities.PruebaEntity;
 import pep3.pruebaservice.Models.CodigoModel;
 import pep3.pruebaservice.Repositories.PruebaRepository;
-import pep3.pruebaservice.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -17,7 +18,8 @@ public class PruebaService {
     @Autowired
     PruebaRepository pruebaRepository;
     @Autowired
-    CodigoService codigoService;
+    RestTemplate restTemplate;
+
 
     // Create
     public ResponseEntity<String> crearPrueba(List<MultipartFile> archivos, List<String> respuestas, String dificultad){
@@ -54,7 +56,20 @@ public class PruebaService {
 
     // peticion a codigo-service/codigo/crear
     public CodigoModel crearCodigo(MultipartFile archivo, String respuesta){
-        CodigoModel.exchange("http://codigo-service/codigo/crear")
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+
+        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+        body.add("codigo", archivo);
+        body.add("respuesta", respuesta);
+
+        HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
+
+        ResponseEntity<CodigoModel> response = restTemplate.exchange("http://codigo-service/codigo/crear",
+                HttpMethod.POST, requestEntity, CodigoModel.class);
+
+        CodigoModel codigoModel = response.getBody();
+        return codigoModel;
     }
 
     // Read
