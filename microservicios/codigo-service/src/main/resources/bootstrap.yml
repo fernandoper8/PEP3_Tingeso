@@ -6,7 +6,7 @@ spring:
       enabled: true
       uri: http://config-service:8081
   datasource:
-    url: jdbc:postgresql://postgresql:5432/pruebaservice
+    url: jdbc:postgresql://postgresql:5432/PEP3_Tingeso
     username: postgres
     password: 1234
   jpa:
