@@ -64,8 +64,9 @@ public class PruebaService {
 
             HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
 
-            String url = "http://localhost:8002/codigo/crear";
+            String url = "http://codigo-service/codigo/crear";
             ResponseEntity<Integer> response = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Integer.class);
+            System.out.println("ID del codigo creado: " + response);
 
             if (response.getStatusCode() == HttpStatus.OK) {
                 return response.getBody();
