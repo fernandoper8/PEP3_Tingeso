@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: prueba-service
+  cloud:
+    config:
+      enabled: true
+      uri: http://config-service:8081
+  datasource:
+    url: jdbc:postgresql://postgresql:5432/pruebaservice
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
