@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/fernandoper8/PEP3_config-data
+          search-paths: config-data-kubernetes
+  application:
+    name: config-service

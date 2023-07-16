@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: codigo-service
+  cloud:
+    config:
+      enabled: true
+      uri: http://config-service:8081 # config-service
+  datasource:
+    url: jdbc:postgresql://postgresql:5432/PEP3_Tingeso
+    username: postgres
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create
