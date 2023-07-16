@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-      app: gateway-deployment
+        app: gateway-deployment
     spec:
       containers:
         - name: gateway-deployment
