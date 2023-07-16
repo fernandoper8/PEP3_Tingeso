@@ -3,11 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/avanzado.iml" filepath="$PROJECT_DIR$/.idea/avanzado.iml" />
-      <module fileurl="file://$PROJECT_DIR$/codigo-service/codigo-service.iml" filepath="$PROJECT_DIR$/codigo-service/codigo-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/eureka-service/eureka-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/gateway-service/gateway-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/prueba-service/prueba-service.iml" filepath="$PROJECT_DIR$/prueba-service/prueba-service.iml" />
     </modules>
   </component>
 </project>

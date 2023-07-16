@@ -1,6 +1,8 @@
 package pep3.codigoservice.Entities;
 
 import javax.persistence.*;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.lang.NonNull;
@@ -14,6 +16,7 @@ public class CodigoEntity {
     @NonNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCodigo;
+    private String pregunta;
     private String respuesta;
     @Lob
     private String contenido;

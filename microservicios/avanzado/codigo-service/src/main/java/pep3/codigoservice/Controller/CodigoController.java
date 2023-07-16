@@ -18,13 +18,13 @@ public class CodigoController {
 
     // Create
     @PostMapping("/subir")
-    public ResponseEntity<String> subirCodigo(@RequestParam("codigo") MultipartFile codigo, String respuesta) {
-        return codigoService.subirCodigo(codigo, respuesta);
+    public ResponseEntity<String> subirCodigo(@RequestParam("codigo") MultipartFile codigo, String respuesta, String pregunta) {
+        return codigoService.subirCodigo(codigo, respuesta, pregunta);
     }
     @PostMapping("/crear")
-    public int crearCodigo(@RequestPart("codigo") MultipartFile codigo, @RequestParam("respuesta") String respuesta){
+    public int crearCodigo(@RequestPart("codigo") MultipartFile codigo, @RequestParam("respuesta") String respuesta, @RequestParam("pregunta") String pregunta){
         System.out.println("entrada depeticion exchange");
-        return codigoService.crearCodigo(codigo, respuesta);
+        return codigoService.crearCodigo(codigo, respuesta, pregunta);
     }
 
     // Read

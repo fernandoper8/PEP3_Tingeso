@@ -24,14 +24,14 @@ public class PruebaService {
 
 
     // Create
-    public ResponseEntity<String> crearPrueba(List<MultipartFile> archivos, List<String> respuestas, String dificultad){
+    public ResponseEntity<String> crearPrueba(List<MultipartFile> archivos, List<String> respuestas, String dificultad, List<String> preguntas){
         try {
             PruebaEntity nuevaPrueba = new PruebaEntity();
 
-            int idCodigo1 = crearCodigo(archivos.get(0), respuestas.get(0));
-            int idCodigo2 = crearCodigo(archivos.get(1), respuestas.get(1));
-            int idCodigo3 = crearCodigo(archivos.get(2), respuestas.get(2));
-            int idCodigo4 = crearCodigo(archivos.get(3), respuestas.get(3));
+            int idCodigo1 = crearCodigo(archivos.get(0), respuestas.get(0), preguntas.get(0));
+            int idCodigo2 = crearCodigo(archivos.get(1), respuestas.get(1), preguntas.get(1));
+            int idCodigo3 = crearCodigo(archivos.get(2), respuestas.get(2), preguntas.get(2));
+            int idCodigo4 = crearCodigo(archivos.get(3), respuestas.get(3), preguntas.get(3));
 
             nuevaPrueba.setDificultad(dificultad);
             nuevaPrueba.setIdCodigo1(idCodigo1);
@@ -52,7 +52,7 @@ public class PruebaService {
     }
 
     // peticion a codigo-service/codigo/crear
-    public int crearCodigo(MultipartFile archivo, String respuesta) {
+    public int crearCodigo(MultipartFile archivo, String respuesta, String pregunta) {
         try {
 
             HttpHeaders headers = new HttpHeaders();
@@ -61,6 +61,7 @@ public class PruebaService {
             MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
             body.add("codigo", archivo.getResource());
             body.add("respuesta", respuesta);
+            body.add("pregunta", pregunta);
 
             HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
 

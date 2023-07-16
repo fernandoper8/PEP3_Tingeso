@@ -19,7 +19,7 @@ public class CodigoService {
     CodigoRepository codigoRepository;
 
     // Create
-    public ResponseEntity<String> subirCodigo(MultipartFile codigo, String respuesta){
+    public ResponseEntity<String> subirCodigo(MultipartFile codigo, String respuesta, String pregunta){
         if(codigo.isEmpty()){
             return ResponseEntity.badRequest().body("Archivo vacío");
         }
@@ -28,6 +28,7 @@ public class CodigoService {
             CodigoEntity nuevoCodigo = new CodigoEntity();
             nuevoCodigo.setContenido(contenido);
             nuevoCodigo.setRespuesta(respuesta);
+            nuevoCodigo.setPregunta(pregunta);
             save(nuevoCodigo);
 
             System.out.println("El id del codigo almacenado es: " + nuevoCodigo.getIdCodigo());
@@ -38,12 +39,13 @@ public class CodigoService {
         }
     }
 
-    public int crearCodigo(MultipartFile codigo, String respuesta) {
+    public int crearCodigo(MultipartFile codigo, String respuesta, String pregunta) {
         try {
             String contenido = new String(codigo.getBytes(), StandardCharsets.UTF_8);
             CodigoEntity nuevoCodigo = new CodigoEntity();
             nuevoCodigo.setContenido(contenido);
             nuevoCodigo.setRespuesta(respuesta);
+            nuevoCodigo.setPregunta(pregunta);
             save(nuevoCodigo);
             System.out.println("El id del código creado es: " + nuevoCodigo.getIdCodigo());
             return nuevoCodigo.getIdCodigo();

@@ -14,13 +14,6 @@
         <module name="gateway-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="codigo-service" target="17" />
-      <module name="config-service" target="17" />
-      <module name="eureka-service" target="17" />
-      <module name="gateway-service" target="11" />
-      <module name="prueba-service" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
