@@ -16,7 +16,7 @@ export default function index() {
 
                     <div className={style.imagen}>
                          <img
-                            src="/img/VPRUEBAPE.webp"
+                            src="/img/V-landing.webp"
                         /> 
                         
                     </div>
