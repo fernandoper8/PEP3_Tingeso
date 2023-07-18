@@ -16,9 +16,9 @@ export default function index() {
 
                     <div className={style.imagen}>
                          <Image
-                            src="/img/final.png"
-                            width="885"
-                            height="793"
+                            src="/img/VPRUEBAPE.webp"
+                            width="1100"
+                            height="1100"
                         >
                         </Image> 
                     </div>
