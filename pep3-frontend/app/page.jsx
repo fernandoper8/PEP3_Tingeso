@@ -15,10 +15,7 @@ export default function index() {
                 <div className={style.contenedorCentral}>
 
                     <div className={style.imagen}>
-                         <img
-                            src="/img/V-landing.webp"
-                        /> 
-                        
+                         <img src="/img/V-landing.webp"/> 
                     </div>
 
                     <div className={style.contenedorBotones}>
