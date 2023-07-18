@@ -15,17 +15,18 @@ export default function index() {
                 <div className={style.contenedorCentral}>
 
                     <div className={style.imagen}>
-                         <Image
+                         <img
                             src="/img/VPRUEBAPE.webp"
-                            width="1100"
-                            height="1100"
-                        >
-                        </Image> 
+                        /> 
+                        
                     </div>
 
                     <div className={style.contenedorBotones}>
                         <button>Crea una evaluación</button>
                         <button>Ver evaluaciones</button>
+                    </div>
+                    <div className={style.contenedorAbout}>
+                        <p>¿Qué es cyber.py?</p>
                     </div>
                 </div>
 
