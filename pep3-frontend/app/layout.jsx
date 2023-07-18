@@ -1,4 +1,6 @@
 import './globals.css'
+import style from './layout.module.css'
+import Link from 'next/link'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -11,7 +13,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <title>cyber.py</title>
+      </head>
+      <body className={`${inter.className} style.body`}>
+
+        <nav className={style.navbar}>
+          <div>
+            <Link className={style.homeLink} href="/"><p>Menu</p></Link>
+          </div>
+        </nav>
+        {children}
+        
+      </body>
     </html>
   )
 }

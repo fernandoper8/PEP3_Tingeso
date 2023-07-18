@@ -1,10 +1,87 @@
 .principal{
+  background-image: url('../public/img/9k.png');
+  background-size: 100% 100%;
+
+
   text-align: center;
   align-items: center;
+
+  height: 100vh;
 }
 
-
-.botones{
+.contenedorPrincipal{
   display: flex;
-  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.contenedorPrincipal h1{
+  position: absolute;
+  top: 10%;
+  font-size: 3em;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.contenedorPrincipal h1 span{
+  font-family: 'Oxta';
+  font-size: 2em;
+}
+
+.contenedorCentral{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.imagen{
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.contenedorBotones{
+  position: absolute;
+  bottom: 25%;
+  z-index: 1;
+
+
+  display: flex;
+  gap: 8em;
+}
+
+.contenedorBotones button{
+  background-color: rgb(0, 255, 255);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+
+  width: 10em;
+}
+
+.contenedorBotones button:hover{
+  color: white;
+  transition: 0.2s;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  height: 30px;
+
+  background-color: aqua;
+  width: 100%;
 }
