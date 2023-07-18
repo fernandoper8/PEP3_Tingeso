@@ -1,0 +1,10 @@
+.principal{
+  text-align: center;
+  align-items: center;
+}
+
+
+.botones{
+  display: flex;
+  gap: 1em;
+}
