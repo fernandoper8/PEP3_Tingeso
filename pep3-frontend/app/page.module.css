@@ -4,38 +4,87 @@
 }
 
 .principal{
-  background-image: url('../public/img/fondo2.png');
+  display: flex;
+  flex-direction: row;
+
+  background-image: url('../public/img/fondo2.jpg');
   background-size: 100% 100%;
-
-
-  text-align: center;
-  align-items: center;
-
   height: 100vh;
 }
 
-.principal h1{
-  position: absolute;
-  top: 10%;
-  font-size: 3em;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 0;
-  margin-top: 0;
+.contenedorIzquierda{
+  width: 40%;
+  height: 100vh;
+} 
+
+.contenedorDerecha{
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  width: 60%;
+  height: 100vh;
+
+  z-index: 1;
 }
 
-.principal h1 span{
+.titulo{
+  margin-top: 10%;
+  text-align: center;
+}
+
+.titulo span{
   font-family: 'Oxta';
-  font-size: 2em;
+  font-size: 10em;
+  color: black;
+  margin-left: 50px;
+  margin-top: 50px;
 }
 
+.botones{
+  margin-top: 10%;
+
+  display: flex;
+  gap: 5em;
+
+  justify-content: center;
+}
+
+.botones button{
+  height: 50px;
+  width: 15em;
+
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 0px 0px 20px 0px;
+}
+
+.botones button:hover{
+  cursor: pointer;
+}
+
+.contenedorDerecha h2{
+  margin-top: 5%;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.imagenLanding{
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  z-index: 0;
+  width: 55%;
+}
 
 .footer{
   position: absolute;
   bottom: 0;
   z-index: 2;
-  height: 30px;
+  height: 40px;
 
-  background-color: rgb(92, 6, 6);
+  background-color: #00FFFF;
   width: 100%;
 }
