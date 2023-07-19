@@ -14,16 +14,7 @@
   height: 100vh;
 }
 
-.contenedorPrincipal{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  height: 100vh;
-}
-
-.contenedorPrincipal h1{
+.principal h1{
   position: absolute;
   top: 10%;
   font-size: 3em;
@@ -33,76 +24,11 @@
   margin-top: 0;
 }
 
-.contenedorPrincipal h1 span{
+.principal h1 span{
   font-family: 'Oxta';
   font-size: 2em;
 }
 
-.contenedorCentral{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  height: 100vh;
-}
-
-.imagen{
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 50%;
-  height: 75%;
-}
-
-.imagen img{
-  width: 90%;
-  height: 100%;
-}
-
-.contenedorBotones{
-  position: absolute;
-  bottom: 25%;
-  z-index: 1;
-
-
-  display: flex;
-  gap: 8em;
-}
-
-.contenedorBotones button{
-  background-color: #E71453;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5em 1em;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-
-  width: 10em;
-}
-
-.contenedorBotones button:hover{
-  background-color: #7e1717;
-  color: white;
-  transition: 0.2s;
-}
-
-.contenedorAbout{
-  position: absolute;
-  z-index: 1;
-  bottom: 15%;
-
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-}
 
 .footer{
   position: absolute;
