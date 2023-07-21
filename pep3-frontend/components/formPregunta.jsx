@@ -5,6 +5,7 @@ import { dracula as tema } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function formPregunta(props) {
     const { numeroPregunta } = props;
+    const texto = "def suma(a, b):\n\treturn a + b\n\nprint(suma(1, 2))"
     return (
         <div className={stylePregunta.card}>
             <div className={stylePregunta.title}>
@@ -22,8 +23,8 @@ export default function formPregunta(props) {
                 <input type="file" placeholder="Escribe la respuesta" />
 
                 {/* <div className={stylePregunta.codigo} /> */}
-                <SyntaxHighlighter language="python" style={tema} showLineNumbers={true} className={stylePregunta.codigo}>
-                    "print('daigo putero')"
+                <SyntaxHighlighter language="python" style={tema} showLineNumbers={true} className={stylePregunta.codigo} breaks="false">
+                    {texto}
                 </SyntaxHighlighter>
             </div>
         </div>

@@ -4,7 +4,6 @@ import Link from 'next/link'
 import style from './crear-evaluacion.module.css'
 import FormPregunta from '../../components/formPregunta'
 import React from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 export default function crearEvaluacion() {
     return (
