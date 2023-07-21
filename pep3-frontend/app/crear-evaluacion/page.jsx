@@ -3,7 +3,7 @@ import style from './crear-evaluacion.module.css'
 import stylePregunta from './pregunta.module.css'
 
 
-export default function index() {
+export default function crearEvaluacion() {
     return (
         <main className={style.main}>
             <section className={style.section}>

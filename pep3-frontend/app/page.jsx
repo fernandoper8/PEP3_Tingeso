@@ -15,7 +15,7 @@ export default function index() {
                 
                 <div className={style.botones}>
                     <Link href="/crear-evaluacion">Crear Evaluación</Link>
-                    <Link href="/">Ver Evaluaciones</Link>
+                    <Link href="/evaluaciones">Ver Evaluaciones</Link>
                 </div>
                 
                 <h2>¿Como funciona?</h2>
