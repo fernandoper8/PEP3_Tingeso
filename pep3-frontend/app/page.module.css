@@ -32,15 +32,12 @@
 
 .titulo{
   margin-top: 10%;
-  text-align: center;
 }
 
 .titulo span{
   font-family: 'Oxta';
   font-size: 8em;
   color: black;
-  margin-left: 50px;
-  margin-top: 50px;
 }
 
 .botones{
