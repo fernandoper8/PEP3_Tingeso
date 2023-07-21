@@ -8,8 +8,9 @@
   flex-direction: row;
 
   background-image: url('../public/img/fondo2.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   height: 100vh;
+  width: 100vw;
 }
 
 .contenedorIzquierda{
@@ -51,18 +52,43 @@
   justify-content: center;
 }
 
-.botones button{
-  height: 50px;
-  width: 15em;
+.botones a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  align-items: center;
+  border-style: solid;
+  border-width: 0 20px;
+
+  cursor: pointer;
+  height: 4rem;
+  width: 18rem;
+  justify-content: center;
+
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+
+  border-image: url('../public/svg/boton-principal.svg') 0 15 fill;
+  color: #00f0ff;
+
+/*   
+  background-color: #00FFFF;
+  box-shadow: 0 0 20px #00FFFF;
+  color: black;
+
+  text-decoration: none;
   font-size: 1.2em;
   font-weight: bold;
-  border: 2px solid black;
-  border-radius: 0px 0px 20px 0px;
+  border: 3px solid black;
+  border-radius: 0px 0px 20px 0px; */
 }
-
-.botones button:hover{
-  cursor: pointer;
+.botones a:active{
+  background-color: #009c9c;
+  transition: 0.5s;
 }
 
 .contenedorDerecha h2{

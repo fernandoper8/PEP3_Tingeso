@@ -8,6 +8,7 @@
     height: 60px;
     width: 100%;
 
+    z-index: 999;
 }
 
 .navbar div{

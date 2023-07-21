@@ -1,5 +1,4 @@
-import Image from 'next/image'
-
+import Link from 'next/link'
 import style from './page.module.css';
 
 export default function index() {
@@ -15,8 +14,8 @@ export default function index() {
                 </div>
                 
                 <div className={style.botones}>
-                    <button>Crear Evaluación</button>
-                    <button>Ver Evaluaciones</button>
+                    <Link href="/crear-evaluacion">Crear Evaluación</Link>
+                    <Link href="/">Ver Evaluaciones</Link>
                 </div>
                 
                 <h2>¿Como funciona?</h2>
