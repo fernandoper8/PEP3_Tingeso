@@ -1,0 +1,182 @@
+.main{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../../../public/img/fondo2.jpg');
+    background-size: cover;
+
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 95vw;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 99.99%, rgba(196, 196, 196, 0.00) 100%);
+    /* filter: blur(50px); */
+
+    position: fixed;
+    z-index: 0;
+}
+.izquierda{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 4rem 0rem 0rem 4rem;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    width: 70%;
+    height: 90%;
+
+    background-color: #181818;
+}
+
+.derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 0% 4rem 4rem 0%;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    width: 20%;
+    height: 90%;
+
+    background-color: #F5E907;
+} 
+
+.derechaSuperior{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+    
+    width: 100%;
+    height: 60%;
+}
+.derechaInferior{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 40%;
+}
+.derechaInferior button{
+    width: 80%;
+    height: 15%;
+    margin-bottom: 15%;
+
+    font-size: larger;
+    font-weight: bold;
+
+    border: 2px solid black;
+    background-color: #0FF;
+    box-shadow: 0px 4px 25px 0px #000;
+    color: white;
+    border-radius: 1.2em;
+}
+.derechaInferior button:hover{
+    transition: 0.5s;
+    background-color: rgb(0, 175, 175);
+    cursor: pointer;
+}
+.contenedorCronometro{
+    margin-top: 10%;
+    width: 80%;
+    height: 30%;
+
+    font-size: 1.5em;
+    font-weight: bold;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    color: white;
+
+    border-radius: 1em;
+    border: 2px solid #0FF;
+    background-color: #998E00;
+}
+.tituloCronometro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    
+    border-bottom: 2px solid #0FF;
+}
+.contenidoCronometro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 60%;
+}
+.contenidoCronometro h2{
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.contenedorIndice{
+    width: 80%;
+    height: 40%;
+
+    font-size: 1.5em;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10%;
+    
+
+    color: white;
+
+    border-radius: 1em;
+    border: 2px solid #0FF;
+    background-color: #998E00;
+}
+
+.contenedorPreguntas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    overflow-y: scroll;
+}
+
+.contenedorPreguntas::-webkit-scrollbar {
+    width: 15px;
+
+    background: #222121;
+    border-radius: 100px;
+}
+.contenedorPreguntas::-webkit-scrollbar-track{
+    background: none;
+}
+.contenedorPreguntas::-webkit-scrollbar-thumb{
+    background: #292929;
+    border-radius: 10px;
+}

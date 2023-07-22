@@ -1,0 +1,9 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    height: 40px;
+  
+    background-color: #00FFFF;
+    width: 100%;
+  }

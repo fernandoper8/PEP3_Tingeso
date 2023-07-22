@@ -1,0 +1,36 @@
+.card{
+    margin: 3% 0%;
+    color: white;
+
+    border-radius: 2.5rem;
+    width: 80%;
+    height: 100%;
+
+    background-color: #474747;
+    box-shadow: 0px 0px 20px 1px rgba(0, 255, 255, 0.60);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardTitulo{
+    width: 90%;
+    margin: 1% 0%;
+}
+.cardTitulo h1{
+    margin-top: 1%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.codigo{
+    width: 80%;
+    height: 25rem;
+}
+.card input{
+    margin: 15px 0%;
+    width: 70%;
+    height: 10%;
+    border-radius: 1rem;
+    border: none;
+}
