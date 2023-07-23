@@ -9,152 +9,173 @@
 
     background-image: url('../../public/img/fondo2.jpg');
     background-size: cover;
-
 }
 
 .section{
+    z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 90vh;
     width: 95vw;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 99.99%, rgba(196, 196, 196, 0.00) 100%);
-    /* filter: blur(50px); */
+
+    filter: blur(0px);
 
     position: fixed;
-    z-index: 0;
+}
+.section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 99.99%, rgba(196, 196, 196, 0.00) 100%);
+  filter: blur(35px);
+  z-index: -1;
 }
 
-.footer{
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-    height: 40px;
-  
-    background-color: #00FFFF;
-    width: 100%;
-  }
-
-  /* Contenido que se encuentra adentro de .section */
-  .titulo{
+.sectionContenido{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-
-    color: white;
-    font-weight: bolder;
-    height: 12%;
-
-    z-index: 2;
-  }
-
-  .titulo h1{
-    font-size: 2em;
-  }
-  .selectorDificultad{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 2%;
-    margin-top: 2%;
-  }
-  .selectorDificultad label{
-    color: white;
-    font-size: x-large;
-  }
-  .selectorDificultad select{
-    width: 10%;
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-
-    color: black;
-    font-size: x-large;
-    text-align: center;
+    height: 90%;
+    width: 90%;
     
-    border-radius: 10px;
-    background-color: #ffffff;
+    box-shadow: 0px 0px 40px 5px rgba(17, 17, 17, 0.274);
+    border-radius: 2rem;
+}
+
+.encabezado{
+    display: flex;
+    flex-direction: row;
+    
+    height: 15%;
+
     border: 2px solid black;
-    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.49); 
-  } 
+    border-radius: 2rem 2rem 0rem 0rem;
 
-  .preguntas{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0% 2%;
+    background-color: #F5E907;
+}
 
-    align-items: center;
-
-    height: 80%;
-
-    margin: 0 1%;
-
-    z-index: 1;
-  }
-
-  .contenedorBotones{
-    height: 5%;
-
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
-
-    align-items: center;
-    justify-content: center;
-
+.dificultad{
     color: white;
-  }
+    font-size: 1.5rem;
+    font-weight: bold;
 
-  .botones{
     display: flex;
     flex-direction: row;
-    gap: 10%;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 5%;
+
     width: 50%;
     height: 100%;
-  }
-
-  .botones button{
-    font-size: x-large;
+}
+.dificultad label{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.dificultad select{
     text-align: center;
-    font-weight: bolder;
-    color: white;
-    
+
     width: 25%;
-    height: 100%;
-
-    border-radius: 10px;
-    background-color: #00FFFF;
+    height: 50%;
+    font-size: 1.5rem;
+    border-radius: 1rem;
     border: 2px solid black;
-    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.49); 
-  }
-
-  .botones button:hover{
+    box-shadow: 0px 4px 15px 0px #000;
+}
+.dificultad select:hover{
     cursor: pointer;
-  }
+}
 
-  .botones a{
-    display:flex;
-    align-items: center;
+.informacion{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    text-decoration: none;
+    align-items: center;
 
-    font-size: x-large;
-    font-weight: bolder;
+    width: 50%;
+    height: 100%;
+}
+
+.avisos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 100%;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 10%;
+    width: 50%;
+    height: 100%;
+
+    padding: 0% 5%;
+}
+
+.botones button{
+    width: 60%;
+    height: 40%;
 
     color: white;
-    text-align: center;
-    
-    width: 25%;
-    height: 100%;
-    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+
+    border-radius: 1rem;
     background-color: #00FFFF;
+    box-shadow: 0px 4px 25px 2px #000;
     border: 2px solid black;
-    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.49); 
-  }
+
+    transition: 0.5s;
+}
+
+.botones button:hover{
+    transition: 0.5s;
+    background-color: #00BFFF;
+    cursor: pointer;
+}
+
+/* Donde van los formularios para las preguntas */
+.cuerpo{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 60% 60% 60%;
+    gap: 5%;
+    padding: 2% 2%;
+    height: 85%;
+
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    background-color: #181818;
+
+    overflow-y: scroll;
+}
+.cuerpo::-webkit-scrollbar {
+    width: 15px;    
+
+    background: #222121;
+    border-radius: 50px;
+}
+
+.cuerpo::-webkit-scrollbar-track{
+    background: none;
+}
+
+.cuerpo::-webkit-scrollbar-thumb{
+    background: #292929;
+    border-radius: 10px;
+}

@@ -1,0 +1,29 @@
+.navbar{
+    position: fixed;
+    
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    height: 60px;
+    width: 100%;
+
+    z-index: 999;
+}
+
+.navbar div{
+    display: flex;
+    align-items: center;
+
+    margin-left: 5em;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.homeLink{
+    color: black;
+    text-decoration: none;
+
+    font-size: x-large;
+    font-weight: bold;
+}
