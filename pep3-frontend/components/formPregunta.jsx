@@ -25,9 +25,9 @@ export default function formPregunta(props) {
                         <label>Ingresa la respuesta</label>
                         <input type="text" placeholder="Escribe la respuesta" />
                     </div>
-                    <div className={style.formArchivo}>
-                        <input id="file" type="file" accept=".py" placeholder="Ingresa el archivo"></input>
+                    <div className={style.form}>
                         <label for="file">Ingresa el archivo .py</label>
+                        <input id="file" type="file" accept=".py" placeholder="Ingresa el archivo"></input>
                     </div>
                 </div>
 
