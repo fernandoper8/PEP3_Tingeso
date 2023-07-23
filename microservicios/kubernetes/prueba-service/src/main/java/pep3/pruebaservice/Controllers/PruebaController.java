@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/prueba")
+@CrossOrigin
 public class PruebaController {
 
     @Autowired
