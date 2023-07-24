@@ -10,18 +10,26 @@ export default function formPregunta(props) {
 
     const [archivo, setArchivo] = useState(null);
     const [codigo, setCodigo] = useState("");
-
+    const [pregunta, setPregunta] = useState("");
+    const [respuesta, setRespuesta] = useState("");
 
     const cambioArchivo = (e) => {
         const archivoSubido = e.target.files[0];
 
         if(archivoSubido && archivoSubido.name.endsWith(".py")){
             setArchivo(e.target.files[0]);
+            localStorage.setItem("archivo"+numeroPregunta, e.target.files[0])
         }else{
             alert("Recuerda que debes subir un archivo .py!")
         }
 
     }
+
+    useEffect(() => {
+        localStorage.setItem("archivo"+numeroPregunta, archivo);
+        localStorage.setItem("pregunta"+numeroPregunta, pregunta);
+        localStorage.setItem("respuesta"+numeroPregunta, respuesta);
+    });
 
     useEffect(() => {
         if (archivo) {
@@ -37,6 +45,16 @@ export default function formPregunta(props) {
         }
     }
 
+    const cambioPregunta = (e) => {
+        setPregunta(e.target.value);
+        localStorage.setItem("pregunta"+numeroPregunta, e.target.value)
+    }
+
+    const cambioRespuesta = (e) => {
+        setRespuesta(e.target.value);
+        localStorage.setItem("respuesta"+numeroPregunta, e.target.value)
+    }
+
     return (
         <div className={style.card}>
 
@@ -47,15 +65,15 @@ export default function formPregunta(props) {
                 <div className={style.izquierdaInputs}>
                     <div className={style.form}>
                         <label>Ingresa la pregunta</label>
-                        <input type="text" placeholder="Escribe la pregunta" />
+                        <input onChange={cambioPregunta} type="text" placeholder="Escribe la pregunta" />
                     </div>
 
                     <div className={style.form}>
                         <label>Ingresa la respuesta</label>
-                        <input type="text" placeholder="Escribe la respuesta" />
+                        <input onChange={cambioRespuesta} type="text" placeholder="Escribe la respuesta" />
                     </div>
                     <div className={style.form}>
-                        <label for="file">Ingresa el archivo .py</label>
+                        <label>Ingresa el archivo .py</label>
                         <input onChange={cambioArchivo} id="file" type="file" accept=".py" placeholder="Ingresa el archivo"></input>
                     </div>
                 </div>
