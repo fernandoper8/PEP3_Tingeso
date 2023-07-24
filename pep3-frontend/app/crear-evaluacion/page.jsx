@@ -31,7 +31,7 @@ export default function crearEvaluacion() {
     const crearPrueba = () => {
         let preguntas = [];
         let respuestas = [];
-        let archivos = [];
+        let codigos = [];
 
         preguntas.push(localStorage.getItem("pregunta1"));
         preguntas.push(localStorage.getItem("pregunta2"));
@@ -43,10 +43,10 @@ export default function crearEvaluacion() {
         respuestas.push(localStorage.getItem("respuesta3"));
         respuestas.push(localStorage.getItem("respuesta4"));
 
-        archivos.push(localStorage.getItem("archivo1"));
-        archivos.push(localStorage.getItem("archivo2"));
-        archivos.push(localStorage.getItem("archivo3"));
-        archivos.push(localStorage.getItem("archivo4"));
+        codigos.push(localStorage.getItem("codigo1"));
+        codigos.push(localStorage.getItem("codigo2"));
+        codigos.push(localStorage.getItem("codigo3"));
+        codigos.push(localStorage.getItem("codigo4"));
 
         if(!verificarVacio(preguntas)){
             alert("Ingrese la pregunta "+faltante);
@@ -56,11 +56,11 @@ export default function crearEvaluacion() {
             alert("Ingrese la respuesta de la pregunta "+faltante);
             return;
         }
-        if(!verificarVacio(archivos)){
+        if(!verificarVacio(codigos)){
             alert("Ingrese el archivo archivo de la pregunta "+faltante);
             return;
         }
-        PruebaService.crearPrueba(preguntas, respuestas, archivos, dificultad);
+        PruebaService.crearPrueba(preguntas, respuestas, codigos, dificultad);
     }
 
     const cambioDificultad = (e) => {

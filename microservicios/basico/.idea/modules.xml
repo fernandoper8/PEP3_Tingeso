@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/basico.iml" filepath="$PROJECT_DIR$/.idea/basico.iml" />
-      <module fileurl="file://$PROJECT_DIR$/codigo-service/codigo-service.iml" filepath="$PROJECT_DIR$/codigo-service/codigo-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/prueba-service/prueba-service.iml" filepath="$PROJECT_DIR$/prueba-service/prueba-service.iml" />
     </modules>
   </component>
 </project>

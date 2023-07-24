@@ -14,6 +14,7 @@ public class CodigoEntity {
     @NonNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCodigo;
+    private String pregunta;
     private String respuesta;
     @Lob
     private String contenido;

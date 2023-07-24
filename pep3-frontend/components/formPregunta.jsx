@@ -1,4 +1,4 @@
-import style from '@/components/styles/formPregunta.module.css'
+import style from './styles/formPregunta.module.css'
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula as tema } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -18,7 +18,6 @@ export default function formPregunta(props) {
 
         if(archivoSubido && archivoSubido.name.endsWith(".py")){
             setArchivo(e.target.files[0]);
-            localStorage.setItem("archivo"+numeroPregunta, e.target.files[0])
         }else{
             alert("Recuerda que debes subir un archivo .py!")
         }
@@ -26,7 +25,7 @@ export default function formPregunta(props) {
     }
 
     useEffect(() => {
-        localStorage.setItem("archivo"+numeroPregunta, archivo);
+        localStorage.setItem("codigo"+numeroPregunta, codigo);
         localStorage.setItem("pregunta"+numeroPregunta, pregunta);
         localStorage.setItem("respuesta"+numeroPregunta, respuesta);
     });
@@ -42,6 +41,7 @@ export default function formPregunta(props) {
         reader.readAsText(archivo);
         reader.onload = async () => {
             setCodigo(reader.result);
+            localStorage.setItem("codigo"+numeroPregunta, codigo);
         }
     }
 

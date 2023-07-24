@@ -14,24 +14,29 @@ class pruebaService {
         return axios.get(PRUEBA_API_URL + '/' + idPrueba);
     }
 
-    agregarElemento(elemento, lista, formData){
-        for(var i = 0; i < lista.length; i++){
-            indice = i + 1;
-            formData.append(elemento+indice, lista[i]);
-        }
-        return formData;
-    }
-
-
-    crearPrueba(preguntas, respuestas, archivos, dificultad){
+    crearPrueba(preguntas, respuestas, codigos, dificultad){
         const formData = new FormData();
 
-        formData = agregarElemento ("pregunta", preguntas, formData);
-        formData = agregarElemento ("respuesta", respuestas, formData);
-        formData = agregarElemento ("archivo", archivos, formData);
+        formData.append("pregunta1", preguntas[0]);
+        formData.append("pregunta2", preguntas[1]);
+        formData.append("pregunta3", preguntas[2]);
+        formData.append("pregunta4", preguntas[3]);
+
+        formData.append("respuesta1", respuestas[0]);
+        formData.append("respuesta2", respuestas[1]);
+        formData.append("respuesta3", respuestas[2]);
+        formData.append("respuesta4", respuestas[3]);
+
+        formData.append("codigo1", codigos[0]);
+        formData.append("codigo2", codigos[1]);
+        formData.append("codigo3", codigos[2]);
+        formData.append("codigo4", codigos[3]);
+
         formData.append("dificultad", dificultad);	
+
+        console.log(formData);
         console.log("post!");
-        return axios.post(PRUEBA_API_URL + '/crear', prueba);
+        return axios.post(PRUEBA_API_URL + '/crear', formData);
     }
 }
 const instance = new pruebaService();

@@ -11,10 +11,6 @@
         <module name="prueba-service" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="codigo-service" target="17" />
-      <module name="prueba-service" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

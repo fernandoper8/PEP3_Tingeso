@@ -1,6 +1,6 @@
 class apiUrl{
     constructor(){
-        this.link = "http://localhost:3000";
+        this.link = "http://localhost:8080";
     }
     getUrl(){
         return this.link;
