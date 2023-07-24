@@ -34,7 +34,7 @@ export default function crearEvaluacion() {
                             pregunta="¿Cuál es la salida del siguiente código?"
                         />
                     </div>
-                    
+
                 </div>
                 <div className={style.derecha}>
 
@@ -44,9 +44,9 @@ export default function crearEvaluacion() {
                                 <h1>Tiempo Transcurrido</h1>
                             </div>
                             <div className={style.contenidoCronometro}>
-                                <h2>00:00:00</h2>    
+                                <h2>00:00:00</h2>
                             </div>
-                            
+
                         </div>
                         <div className={style.contenedorIndice}>
                             <h2>Pregunta 1</h2>
@@ -59,9 +59,8 @@ export default function crearEvaluacion() {
                     <div className={style.derechaInferior}>
                         <button>Finalizar Prueba</button>
                     </div>
-                    
-                </div>
 
+                </div>
 
             </section>
             <Footer />
