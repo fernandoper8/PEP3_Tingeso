@@ -138,3 +138,68 @@
 .tabla tbody tr:last-of-type{
     border-bottom: 4px solid black;
 }
+
+.tabla a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 15% 15%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.tabla a:hover{
+    color: black;
+    border: 2px solid black;
+    transition: 0.5s;
+}
+
+.noHayPruebas{
+    display: flex; 
+    flex-direction: column;
+    gap: 2rem;
+    width: 70%;
+    height: fit-content;
+
+    align-items: center;
+
+    border-radius: 2rem;
+
+    padding: 2% 1%;
+    border: 2px solid black;
+
+    background-color: #cfc507;
+    box-shadow: 0px 4px 25px 0px #0FF;
+}
+
+.noHayPruebas h1{
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+}
+
+.noHayPruebas img{
+    width: 50%;
+}
+
+.noHayPruebas h1{
+
+}
+
+.noHayPruebas a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1% 2%;
+    transition: 0.5s;
+}
+
+.noHayPruebas a:hover{
+    color: white;
+    border: 2px solid white;
+    transition: 0.5s;
+}

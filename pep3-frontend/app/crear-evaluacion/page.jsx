@@ -61,6 +61,7 @@ export default function crearEvaluacion() {
             return;
         }
         PruebaService.crearPrueba(preguntas, respuestas, codigos, dificultad);
+        alert("Se ha creado con exito la evaluacion!");
     }
 
     const cambioDificultad = (e) => {
@@ -78,9 +79,9 @@ export default function crearEvaluacion() {
                         <div className={style.dificultad}>
                             <label>Selecciona la Dificultad: </label>
                             <select onChange={cambioDificultad}>
-                                <option value="facil">Facil</option>
-                                <option value="intermedio">Intermedio</option>
-                                <option value="dificil">Dificil</option>
+                                <option value="Facil">Facil</option>
+                                <option value="Intermedio">Intermedio</option>
+                                <option value="Dificil">Dificil</option>
                             </select>
                         </div>
 

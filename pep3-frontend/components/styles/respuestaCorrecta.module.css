@@ -1,0 +1,9 @@
+.respuestaCorrecta{
+    border-radius: 1em;
+    border: 2px solid rgba(30, 255, 0, 0.524);
+    background-color: rgba(0, 128, 0, 0.294);
+    box-shadow: 0px 0px 20px 1px rgba(30, 255, 0, 0.524);
+
+    padding: 1em;
+    margin: 0.5em 0 1em 0;
+}

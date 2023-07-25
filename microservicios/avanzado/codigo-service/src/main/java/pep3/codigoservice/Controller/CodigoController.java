@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/codigo")
+@CrossOrigin
 public class CodigoController {
 
     @Autowired

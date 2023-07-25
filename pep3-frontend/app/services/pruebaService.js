@@ -8,9 +8,11 @@ const PRUEBA_API_URL = url + '/prueba';
 class pruebaService {
 
     getPruebas(){
+        console.log("get!");
         return axios.get(PRUEBA_API_URL);
     }
     getPruebaById(idPrueba){
+        console.log("get by id!");
         return axios.get(PRUEBA_API_URL + '/' + idPrueba);
     }
 
