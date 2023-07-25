@@ -8,6 +8,7 @@ import PruebaService from '../../services/pruebaService'
 import CodigoService from '../../services/codigoService'
 import EvaluacionPregunta from '../../../components/evaluacionPregunta'
 import Footer from '../../../components/footer'
+import Cronometro from '../../../components/cronometro'
 
 export default function crearEvaluacion({ params }) {
     const [prueba, setPrueba] = useState([]);
@@ -162,10 +163,11 @@ export default function crearEvaluacion({ params }) {
                             <div className={style.tituloCronometro}>
                                 <h1>Tiempo Transcurrido</h1>
                             </div>
-                            <div className={style.contenidoCronometro}>
-                                <h2>00:00:00</h2>
-                            </div>
-
+                            {/* Componente cronometro */}
+                            <Cronometro
+                                flag={flagRespondido}
+                                setFlag={setFlagRespondido}
+                            />
                         </div>
                         <div className={style.contenedorIndice}>
                             <h2>Pregunta 1</h2>
