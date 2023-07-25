@@ -87,7 +87,7 @@ export default function crearEvaluacion() {
 
                         <div className={style.informacion}>
                             <div className={style.avisos}>
-                                algo
+                                {/* colocar algun componente de mensaje o algo */}
                             </div>
                             <div className={style.botones}>
                                 <button>Ayuda</button>

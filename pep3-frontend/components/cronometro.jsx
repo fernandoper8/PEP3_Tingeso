@@ -5,26 +5,9 @@ import { useEffect, useState } from 'react'
 export default function cronometro(props) {
     const { flag, setFlag } = props;
 
-    let segundosFinal = 0;
-    let minutosFinal = 0;
-    let horasFinal = 0;
-
     const [segundos, setSegundos] = useState(0);
     const [minutos, setMinutos] = useState(0);
     const [horas, setHoras] = useState(0);
-
-
-    // useEffect(() => {
-    //     const cronometroID = setInterval(() => {
-    //         setSegundos(segundos => segundos + 1);
-    //     }, 1000);
-
-
-    //     return () => {
-    //         clearInterval(cronometroID);
-    //     };
-
-    // }, []);
 
     useEffect(() => {
         let cronometroID;
@@ -38,7 +21,7 @@ export default function cronometro(props) {
         return () => {
             clearInterval(cronometroID);
         };
-    }, [flag]); // Agregar flag como dependencia
+    }, [flag]);
 
     useEffect(() => {
         if (segundos >= 60) {
@@ -55,19 +38,13 @@ export default function cronometro(props) {
     }, [minutos]);
 
     // guardar en localStorage
-    useEffect(() => {
-        localStorage.setItem("tiempoCronometro", JSON.stringify({ horas, minutos, segundos }));
-    }, [horas, minutos, segundos]);
+    // useEffect(() => {
+    //     localStorage.setItem("tiempoCronometro", JSON.stringify({ horas, minutos, segundos }));
+    // }, [horas, minutos, segundos]);
 
-    localStorage.setItem("segundos", segundos);
-    localStorage.setItem("minutos", minutos);
-    localStorage.setItem("horas", horas);
-
-    const reiniciarCronometro = () => {
-        setSegundos(0);
-        setMinutos(0);
-        setHoras(0);
-    }
+    // localStorage.setItem("segundos", segundos);
+    // localStorage.setItem("minutos", minutos);
+    // localStorage.setItem("horas", horas);
 
     const formatoTiempo = valor => {
         return valor < 10 ? `0${valor}` : valor;

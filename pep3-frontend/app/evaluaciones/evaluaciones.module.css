@@ -11,39 +11,14 @@
     background-size: cover;
 }
 
-.section{
-    z-index: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    width: 95vw;
-
-    filter: blur(0px);
-
-    position: fixed;
-}
-.section::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 99.99%, rgba(196, 196, 196, 0.00) 100%);
-  filter: blur(35px);
-  z-index: -1;
-}
-
-.sectionContenido{
+.sectionContenido {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 90%;
     width: 90%;
-    
+
     border-radius: 2rem;
 }
 
@@ -56,7 +31,7 @@
 }
 
 .contenedorTitulo h1 {
-    color: white;
+    color: black;
     font-weight: bolder;
     font-size: 2em;
 }
@@ -72,15 +47,18 @@
     overflow-y: scroll;
 
 }
+
 .contenedorTabla::-webkit-scrollbar {
     width: 10px;
     background: #292929;
     border-radius: 10px;
 }
-.contenedorTabla::-webkit-scrollbar-track{
+
+.contenedorTabla::-webkit-scrollbar-track {
     background: none;
 }
-.contenedorTabla::-webkit-scrollbar-thumb{
+
+.contenedorTabla::-webkit-scrollbar-thumb {
     background: #d7cc05;
     border-radius: 10px;
 }
@@ -124,22 +102,23 @@
     text-align: center;
 }
 
-.tabla tbody tr{
+.tabla tbody tr {
     /*border-bottom: 2px solid black;   probablemente quitar */
 }
 
-.tabla tbody tr:nth-of-type(odd){
+.tabla tbody tr:nth-of-type(odd) {
     background: #d7cc05;
 }
-.tabla tbody tr:nth-of-type(even){
+
+.tabla tbody tr:nth-of-type(even) {
     background: #998E00;
 }
 
-.tabla tbody tr:last-of-type{
+.tabla tbody tr:last-of-type {
     border-bottom: 4px solid black;
 }
 
-.tabla a{
+.tabla a {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -149,14 +128,14 @@
     transition: 0.5s;
 }
 
-.tabla a:hover{
+.tabla a:hover {
     color: black;
     border: 2px solid black;
     transition: 0.5s;
 }
 
-.noHayPruebas{
-    display: flex; 
+.noHayPruebas {
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     width: 70%;
@@ -173,21 +152,19 @@
     box-shadow: 0px 4px 25px 0px #0FF;
 }
 
-.noHayPruebas h1{
+.noHayPruebas h1 {
     font-size: 2em;
     font-weight: bold;
     color: black;
 }
 
-.noHayPruebas img{
+.noHayPruebas img {
     width: 50%;
 }
 
-.noHayPruebas h1{
+.noHayPruebas h1 {}
 
-}
-
-.noHayPruebas a{
+.noHayPruebas a {
     text-decoration: none;
     color: black;
     font-size: 1.5em;
@@ -198,7 +175,7 @@
     transition: 0.5s;
 }
 
-.noHayPruebas a:hover{
+.noHayPruebas a:hover {
     color: white;
     border: 2px solid white;
     transition: 0.5s;

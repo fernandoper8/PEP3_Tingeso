@@ -3,10 +3,11 @@
     
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 
-    height: 60px;
+    height: 80px;
     width: 100%;
+
 
     z-index: 999;
 }
@@ -14,16 +15,37 @@
 .navbar div{
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 2em;
 
-    margin-left: 5em;
-    margin-top: 10px;
-    height: 100%;
+    border: 2px solid #ffdd00;
+    border-radius: 12px;
+    padding: 0% 2%;
+    
+    height: 80%;
+    width: 25%;
+
+    background-color: #36363679;
 }
 
-.homeLink{
-    color: black;
+.navbar div a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    height: 100%;
+    color: white;
     text-decoration: none;
+
+    padding: 0% 2%;
 
     font-size: x-large;
     font-weight: bold;
+    transition: 0.5s;    
+}
+
+.navbar div a:hover{
+    color: black;
+    background-color: #ffdd00;
+    transition: 0.5s;
 }

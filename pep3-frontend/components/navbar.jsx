@@ -5,7 +5,9 @@ export default function Navbar() {
     return(
         <nav className={style.navbar}>
           <div>
-            <Link className={style.homeLink} href="/"><p>Menu</p></Link>
+            <Link href="/"><p>Menu</p></Link>
+            <Link href="/crear-evaluacion"><p>Crear Evaluación</p></Link>
+            <Link href="/evaluaciones"><p>Ver Evaluaciones</p></Link>
           </div>
         </nav>
     )

@@ -29,45 +29,45 @@ export default function evaluaciones() {
 
     return (
         <main className={style.main}>
-            <section className={style.section}>
-                <section className={style.sectionContenido}>
-                    <div className={style.contenedorTitulo}>
-                        <h1>Busca la evaluación que quieras realizar</h1>
-                    </div>
 
-                    <div className={style.contenedorTabla}>
-                        {pruebas.length == 0 ? (
-                            <div className={style.noHayPruebas}>
-                                <h1>No hay pruebas</h1>
-                                <Link href="/crear-evaluacion">Crear una Evaluación</Link>
-                                <img src="/img/hutao-cyberpunk.png" />
-                            </div>
-                        ) : (
-                            <table className={style.tabla}>
-                                <thead>
-                                    <tr>
-                                        <th>N° Prueba</th>
-                                        <th>Dificultad</th>
-                                        <th>Accion</th>
+            <section className={style.sectionContenido}>
+                <div className={style.contenedorTitulo}>
+                    <h1>Busca la evaluación que quieras realizar</h1>
+                </div>
+
+                <div className={style.contenedorTabla}>
+                    {pruebas.length == 0 ? (
+                        <div className={style.noHayPruebas}>
+                            <h1>No hay pruebas</h1>
+                            <Link href="/crear-evaluacion">Crear una Evaluación</Link>
+                            <img src="/img/hutao-cyberpunk.png" />
+                        </div>
+                    ) : (
+                        <table className={style.tabla}>
+                            <thead>
+                                <tr>
+                                    <th>N° Prueba</th>
+                                    <th>Dificultad</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {pruebas.map((prueba) => (
+                                    <tr key={prueba.idPrueba}>
+                                        <td>{prueba.idPrueba}</td>
+                                        <td>{prueba.dificultad}</td>
+                                        <td><Link href={`/evaluaciones/${prueba.idPrueba}`}>Realizar</Link></td>
                                     </tr>
-                                </thead>
-
-                                <tbody>
-                                    {pruebas.map((prueba) => (
-                                        <tr key={prueba.idPrueba}>
-                                            <td>{prueba.idPrueba}</td>
-                                            <td>{prueba.dificultad}</td>
-                                            <td><Link href={`/evaluaciones/${prueba.idPrueba}`}>Realizar</Link></td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        )}
-                    </div>
-                </section>
-
+                                ))}
+                            </tbody>
+                        </table>
+                    )}
+                </div>
             </section>
+
+
             <footer className={style.footer} />
-        </main>
+        </main >
     )
 }
